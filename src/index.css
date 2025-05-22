@@ -46,7 +46,8 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.5em;
+  margin: 1em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -90,8 +91,21 @@ tr {
   color: white;
 }
 
+th, td {
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds "..." when text overflows */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
 tbody tr:nth-child(odd) {
   background-color: #333333;
+}
+
+.candbox {
+  background-color: black;
+  border-radius: 50px 50px 20px 20px;
+  margin: 0px 0px 50px 0px;
+  max-width: 420px;
 }
 
 .nav {
@@ -112,9 +126,53 @@ tbody tr:nth-child(odd) {
 
 .active {
   font-weight: 700;
+  color: white;
 }
 
 .table {
   width: 80vw;
   table-layout: fixed;
+}
+
+#candimg {
+  border-radius: 50px 50px 0px 0px;
+  width: 420px;
+  height: 420px;
+}
+#cand-text {
+  padding: 0px 10px 10px 10px; /* top right bottom left */
+}
+
+#table-img {
+  max-width: 50%;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+#table-button {
+  display: block;
+}
+
+#table-button img {
+  max-width: 75%;
+}
+
+#td-bio {
+  word-wrap: break-word; /* Ensures long words break */
+  white-space: normal; /* Allows text to wrap */
+  overflow: hidden; /* Prevents overflow */
+  max-height: 2em; /* Limits how many lines the text can take */
+  line-height: 1.2em; /* Adjusts line spacing */
+  vertical-align: center;
+}
+
+#button-div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 420px;
+}
+
+#button-div img {
+  max-width: 100px;
 }
